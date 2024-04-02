@@ -28,11 +28,11 @@
 .intro__rt { width: 50%; max-width: 620px; height: 380px; position: relative; }
 .intro__list { width: 100%; height: 100%; position: relative; border-radius: 32px; overflow: hidden; }
 .intro__item { width: 100%; height: 100%; position: absolute; top: 50%; left: 50%; border-radius: 32px; overflow: hidden; transform: translate(-50%,-50%) scale(1.2); filter: blur(16px); opacity: 0; transition: all 3s; }
-.intro__item--01 { background: url('/images/intro/intro01.png') no-repeat center / cover; }
-.intro__item--02 { background: url('/images/intro/intro02.png') no-repeat center / cover; }
-.intro__item--03 { background: url('/images/intro/intro03.png') no-repeat center / cover; }
-.intro__item--04 { background: url('/images/intro/intro04.png') no-repeat center / cover; }
-.intro__item--05 { background: url('/images/intro/intro05.png') no-repeat center / cover; }
+.intro__item--01 { background: url('../images/intro/intro01.png') no-repeat center / cover; }
+.intro__item--02 { background: url('../images/intro/intro02.png') no-repeat center / cover; }
+.intro__item--03 { background: url('../images/intro/intro03.png') no-repeat center / cover; }
+.intro__item--04 { background: url('../images/intro/intro04.png') no-repeat center / cover; }
+.intro__item--05 { background: url('../images/intro/intro05.png') no-repeat center / cover; }
 .intro__item.focus { opacity: 1; transform: translate(-50%,-50%) scale(1); filter: blur(0);}
 .intro__btnbox { position: absolute; right: 40px; bottom: 30px; display: flex; align-items: center; gap: 10px; }
 

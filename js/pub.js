@@ -53,16 +53,16 @@ $(function() {
          var cntctT = $('#mainCntct').offset().top - headerHi;
 
          if (windowT >= 0 && windowT <= introT) {
-            $('#logo').attr('src', '/images/logo-white.png');
+            $('#logo').attr('src', 'images/logo-white.png');
             $('#nav').stop().removeClass('blk');
          } else if (windowT >= introT && windowT <= techT) {
-            $('#logo').attr('src', '/images/logo.png');
+            $('#logo').attr('src', 'images/logo.png');
             $('#nav').stop().addClass('blk');
          } else if (windowT >= techT && windowT <= cntctT) {
-            $('#logo').attr('src', '/images/logo-white.png');
+            $('#logo').attr('src', 'images/logo-white.png');
             $('#nav').stop().removeClass('blk');
          } else if (windowT >= cntctT) {
-            $('#logo').attr('src', '/images/logo.png');
+            $('#logo').attr('src', 'images/logo.png');
             $('#nav').stop().addClass('blk');
          }
       }
