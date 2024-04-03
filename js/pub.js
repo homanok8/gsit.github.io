@@ -47,7 +47,7 @@ $(function() {
       var headerHi = $('#header').height() - 20;
 
       // 메인페이지 일때
-      if ($('#main')) {
+      if ($('#main').length) {
          var introT = $('#mainIntro').offset().top - headerHi;
          var techT = $('#mainTech').offset().top - headerHi;
          var cntctT = $('#mainCntct').offset().top - headerHi;
@@ -66,5 +66,30 @@ $(function() {
             $('#nav').stop().addClass('blk');
          }
       }
+
+      // Technology 페이지 일때
+      if ($('#technology').length) {
+         var contentsT = $('#contents').offset().top - headerHi;
+
+         if (windowT >= contentsT) {
+            $('#logo').attr('src', '../../images/logo.png');
+            $('#nav').stop().addClass('blk');
+         } else {
+            $('#logo').attr('src', '../../images/logo-white.png');
+            $('#nav').stop().removeClass('blk');
+         }
+      }
+
+      // 탑 버튼 on
+      if (windowT > 0) {
+         $('#aside').stop().fadeIn();
+      } else {
+         $('#aside').stop().fadeOut();
+      }
+   });
+
+   // TOP 버튼 클릭 시
+   $('#topBtn').click(function() {
+      $('html, body').animate({scrollTop: 0}, 300);
    });
 });

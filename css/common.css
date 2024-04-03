@@ -13,6 +13,7 @@
 	--btn_background: #2D5BFF;
 	--btn_background_hover: #1436af;
 	--border_color: #E9E9E9;
+	--box_shadow: 10px 10px 20px #00000014;
 }
 * {
 	box-sizing: border-box;

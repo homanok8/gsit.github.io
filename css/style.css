@@ -5,6 +5,13 @@
 .btn:hover { background: var(--btn_background_hover); }
 .slide-btn { display: block; width: 8px; height: 8px; border-radius: 50%; background: var(--bg_white); opacity: 0.6; border: 0; padding: 0; cursor: pointer; transition: all 0.3s; }
 .slide-btn.focus { background: var(--btn_background); opacity: 1; }
+.aside { display: none; position: fixed; right: 3%; bottom: 100px; z-index: 9999; }
+.top-btn { width: 80px; height: 80px; display: inline-flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px; font-size: 16px; color: var(--black); border-radius: 50%; background: var(--bg_white); border: 1px solid var(--border_color); box-shadow: var(--box_shadow); cursor: pointer; }
+.top-btn::before { content: ''; display: inline-block; width: 5px; height: 5px; border-top: 1px solid #000; border-left: 1px solid #000; transform: rotate(45deg); position: relative; top: 0; transition: all 0.3s; }
+.top-btn:hover::before { top: -5px; }
+.gradient-box { width: 100%; display: flex; align-items: center; justify-content: space-between; position: relative; }
+.gradient-line { display: block; width: 100%; height: 2px; background-image: linear-gradient(to right, #CFDAFF, #2D5BFF); position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); }
+.gradient-point { display: block; width: 8px; height: 8px; border-radius: 50%; background: #2D5BFF; position: relative; z-index: 2; }
 
 /* animation */
 @keyframes rotate_bg { 100% { transform: translate(-50%,-50%) rotate(360deg); }}
@@ -62,3 +69,59 @@
 .cntct__tit { font-size: 56px; font-weight: 700; color: var(--black); margin-bottom: 20px; }
 .cntct__txt { font-size: 22px; color: var(--gray); margin-bottom: 50px; }
 .cntct__bg { display: block; width: 50%; max-width: 319px; align-self: center; }
+
+/* Technology - title */
+.title { width: 100%; height: 700px; background-repeat: no-repeat; background-position: center; background-size: cover; position: relative; }
+.title::before { content: ''; display: block; width: 100%; height: 100%; background: rgba(0,0,0,0.2); position: absolute; top: 0; left: 0; }
+.title--01 { background-image: url('../images/title-bg01.png'); }
+.title__inner { width: 100%; max-width: 1400px; height: 100%; padding: 88px 17px; margin: 0 auto; }
+.title__text { width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 24px; position: relative; z-index: 2; }
+.title__top { font-size: 70px; color: var(--white); font-weight: 700; text-align: center; letter-spacing: 0; }
+.title__bm { font-size: 22px; color: var(--white); text-align: center; }
+
+/* Technology - contents */
+.contents { background: var(--bg_skyblue); }
+
+/* Technology - system */
+.abr { width: 100%; max-width: 1400px; padding: 120px 17px; margin: 0 auto; }
+.abr__tit { font-size: 34px; font-weight: 700; color: var(--black); text-align: center; margin-bottom: 24px; }
+.abr__desc { display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center; font-size: 22px; color: var(--gray); margin-bottom: 40px; }
+.system { display: grid; grid-template-columns: 198px 1fr 198px; gap: 60px; }
+.system__lf { display: flex; align-items: center; justify-content: center; background: var(--white); border: 1px solid var(--border_color); border-radius: 30px; padding: 40px; }
+.system__name { display: block; text-align: center; font-size: 28px; font-weight: bold; color: var(--black); }
+.system__mdl { display: grid; grid-template-columns: 1fr; gap: 30px; }
+.system__top { background: var(--white); border: 1px solid var(--border_color); border-radius: 30px; padding: 40px 30px; position: relative; }
+.system__logo { display: flex; align-items: center; justify-content: space-between; margin-top: 20px; }
+.system__logo-img { display: block; width: 140px; }
+.system__list { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 10px; margin-top: 30px; }
+.system__item { display: flex; align-items: center; justify-content: center; border: 1px solid var(--border_color); border-radius: 10px; background: var(--bg_skyblue); font-size: 20px; color: var(--black); padding: 15px; }
+.system__btm { background: var(--white); border: 1px solid var(--border_color); border-radius: 30px; padding: 40px 30px; position: relative; }
+.system__grid { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 10px; margin-top: 30px; }
+.system__fig { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; padding-bottom: 26px; background: var(--bg_skyblue); border: 1px solid var(--border_color); border-radius: 10px; gap: 12px; aspect-ratio: 1/1; position: relative; }
+.system__fig--empty { border: 0; background: transparent; }
+.system__fig--after::after { content: '이중화'; display: block; font-size: 14px; color: var(--white); padding: 5px 15px; white-space: nowrap; border-radius: 15px; background: #8492D8; position: absolute; top: 0; right: -38px; z-index: 3; }
+.system__fig > img { display: block; width: 74px; }
+.system__mn { font-size: 20px; color: var(--black); }
+.system__rt { background: var(--white); border: 1px solid var(--border_color); border-radius: 30px; padding: 40px 20px; position: relative; }
+.system__flex { display: flex; flex-direction: column; gap: 26px; margin-top: 30px; }
+.system__fig2 { display: flex; flex-direction: column; align-items: center; gap: 15px; }
+.system__fig2 > img { display: block; width: 100%; aspect-ratio: 1/0.78; object-fit: contain; object-position: center; padding: 18%; background: var(--bg_skyblue); border: 1px solid var(--border_color); border-radius: 10px; }
+.system__cap { font-size: 16px; color: var(--black); text-align: center; }
+.system__fig > .system__relf { width: calc(100% + 30px); position: absolute; top: 49%; left: 50%; transform: translate(-50%,-50%); z-index: 3; display: flex; flex-direction: column; align-items: center; }
+.system__desc { font-size: 14px; color: #5E6AA8; padding-top: 5px; }
+.system__btm > .system__relf { width: 68px; position: absolute; top: 58px; right: calc(100% - 3.5px); z-index: 3; display: flex; flex-direction: column; align-items: center; }
+.system__top > .system__relf { width: 68px; position: absolute; bottom: 58px; right: calc(100% - 3.5px); z-index: 3; display: flex; flex-direction: column; align-items: center; }
+.system__top > .system__relf .system__desc { padding-top: 0; padding-bottom: 5px; }
+.system__top > .system__relf .gradient-line { transform: translate(-50%, -50%) rotate(180deg); }
+.system__rotate { display: block; width: 90px; position: absolute; top: calc(100% - 29px); left: calc(100% - 17px); z-index: 3; }
+
+/* Technology - effect */
+.effect { width: 100%; max-width: 1400px; padding: 0 17px 120px; margin: 0 auto; }
+.effect__block { display: flex; gap: 100px; }
+.effect__lf { flex: 1; }
+.effect__tit { font-size: 56px; font-weight: 700; margin-bottom: 22px; }
+.effect__list { display: flex; flex-direction: column; gap: 10px; }
+.effect__item { display: flex; gap: 18px; background: #F4F5FB; border: 1px solid var(--border_color); border-radius: 10px; padding: 8px 24px; line-height: 39px; font-size: 20px; color: var(--black); }
+.effect__num { font-size: 30px; font-weight: 700; color: #D7D7EB; font-style: italic; }
+.effect__rt { width: 40%; max-width: 393px; }
+.effect__img { display: block; width: 100%; }
