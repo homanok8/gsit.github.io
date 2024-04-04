@@ -41,6 +41,39 @@ $(function() {
       slidePlay();
    });
 
+   // 텍스트 애니메이션
+   var textCount = 0;
+   var scrollFirst = 0;
+   var textSize = $('.plan__item').length - 1;
+   var textInterval = null;
+   var textSetTime = null;
+
+   function textAnimation() {
+      $('.plan__item').eq(textCount).stop().addClass('focus');
+      textSetTime = setTimeout(function() {
+         $('.plan__item').eq(textCount).stop().removeClass('focus');
+         $('.plan__item').eq(textCount).stop().addClass('blur');
+      }, 3000);
+      textInterval = setInterval(function() {
+         if (textCount < textSize) {
+            textCount++;
+            $('.plan__item').eq(textCount).stop().addClass('focus');
+            if (textCount != textSize) {
+               textSetTime = setTimeout(function() {
+                  $('.plan__item').eq(textCount).stop().removeClass('focus');
+                  $('.plan__item').eq(textCount).stop().addClass('blur');
+               }, 3000);
+            }
+         }
+         // console.log(textCount);
+      }, 4000);
+
+      textSetTime = setTimeout(function() {
+         clearInterval(textInterval);
+         textInterval = null;
+      }, 20500);
+   }
+
    // 메인 페이지 스크롤 이벤트
    $(window).scroll(function() {
       var windowT = $(this).scrollTop();
@@ -86,10 +119,32 @@ $(function() {
       } else {
          $('#aside').stop().fadeOut();
       }
+
+      if ($('#plan').length) {
+         var planT = $('#plan').offset().top - headerHi;
+         if (windowT >= planT) {
+            scrollFirst++;
+            if (scrollFirst == 1) {
+               textAnimation();
+            }
+         }
+      }
    });
 
    // TOP 버튼 클릭 시
    $('#topBtn').click(function() {
       $('html, body').animate({scrollTop: 0}, 300);
    });
+
+   // history 토글 버튼
+   $('.hst__btn').click(function() {
+      $(this).find('i').stop().toggleClass('active');
+      if ($(this).find('i').hasClass('active')) {
+         $(this).next().stop().slideDown();
+         $(this).next().css({'display': 'flex'});
+      } else {
+         $(this).next().stop().slideUp();
+      }
+   });
+   
 });
