@@ -20,6 +20,54 @@
       transform: translate(-50%,-50%) rotate(360deg);
    }
 }
+@-webkit-keyframes text-focus-in {
+   0% {
+      -webkit-filter: blur(12px);
+      filter: blur(12px);
+      opacity: 0;
+   }
+   100% {
+      -webkit-filter: blur(0px);
+      filter: blur(0px);
+      opacity: 1;
+   }
+}
+@keyframes text-focus-in {
+   0% {
+      -webkit-filter: blur(12px);
+      filter: blur(12px);
+      opacity: 0;
+   }
+   100% {
+      -webkit-filter: blur(0px);
+      filter: blur(0px);
+      opacity: 1;
+   }
+}
+@-webkit-keyframes fade-in-right {
+   0% {
+      -webkit-transform: translateX(50px);
+      transform: translateX(50px);
+      opacity: 0;
+   }
+   100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+      opacity: 1;
+   }
+}
+@keyframes fade-in-right {
+   0% {
+      -webkit-transform: translateX(50px);
+      transform: translateX(50px);
+      opacity: 0;
+   }
+   100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+      opacity: 1;
+   }
+}
 @-webkit-keyframes focus-in-expand {
    0% {
       letter-spacing: -0.5em;
@@ -262,8 +310,10 @@
 .work__inner { width: 100%; max-width: 1400px; padding: 120px 17px; margin: 0 auto; }
 .work__tit { font-size: 22px; color: #2D5BFF; margin-bottom: 14px; }
 .work__dl { display: flex; gap: 100px; }
-.work__dt { font-size: 56px; font-weight: 400; color: var(--black); white-space: nowrap; }
-.work__dd { font-size: 22px; color: var(--gray); }
+.work__dt { font-size: 56px; font-weight: 400; color: var(--black); white-space: nowrap; opacity: 0; }
+.work__dt.focus { -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both; animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both; }
+.work__dd { font-size: 22px; color: var(--gray); opacity: 0; }
+.work__dd.focus { -webkit-animation: fade-in-right 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1s both; animation: fade-in-right 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1s both; }
 
 /* Company - Plan */
 .plan { width: 100%; height: 100vh; background: url('../images/plan-bg.png') no-repeat center / cover; position: relative; overflow: hidden; }
@@ -283,11 +333,13 @@
 .hst__block { display: flex; flex-direction: column; gap: 60px; }
 .hst__box { display: flex; gap: 135px; align-items: flex-start; }
 .hst__btn { display: flex; align-items: center; gap: 20px; padding: 0; border: 0; background: transparent; cursor: pointer; }
-.hst__icon { display: block; width: 24px; height: 24px; position: relative; }
+.hst__icon { display: block; width: 24px; height: 24px; position: relative; transform: rotate(0deg); transition: all 0.3s; }
 .hst__icon::before { content: ''; display: block; width: 100%; height: 6px; background-image: linear-gradient(104deg, #2D5BFF, #8AC4FF); position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); }
 .hst__icon::after { content: ''; display: block; width: 100%; height: 6px; background-image: linear-gradient(104deg, #2D5BFF, #8AC4FF); position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%) rotate(90deg); transition: all 0.3s; }
 .hst__icon.active::after { transform: translate(-50%,-50%) rotate(0deg); }
-.hst__year { font-size: 34px; font-weight: 700; }
+.hst__btn:hover .hst__icon { transform: rotate(360deg); }
+.hst__year { font-size: 34px; font-weight: 700; transform: scale(1); transition: all 0.3s; }
+.hst__btn:hover .hst__year { transform: scale(1.1); }
 .hst__list { display: none; flex-direction: column; gap: 16px; }
 .hst__item { display: flex; gap: 20px; font-size: 22px; }
 .hst__box:first-child .hst__list { display: flex; }
@@ -304,3 +356,11 @@
 .ognz__item:hover .ognz__name { color: #2D5BFF; }
 
 /* Company - Patent */
+.patent { width: 100%; max-width: 1400px; padding: 0 17px; }
+.patent__block { display: flex; gap: 30px; }
+.patent__lf { flex: 1; }
+.patent__dl { width: 100%; height: 100%; background: var(--white); border-radius: 30px; border: 1px solid var(--border_color); padding: 40px 30px; }
+.patent__dt { font-size: 22px; font-weight: 700; color: var(--black); margin-bottom: 20px; }
+.patent__dd { font-size: 16px; color: var(--black); }
+.patent__dd + .patent__dd { margin-top: 9px; }
+.patent__rt { width: 30%; max-width: 418px; }

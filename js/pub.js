@@ -79,7 +79,7 @@ $(function() {
       var windowT = $(this).scrollTop();
       var headerHi = $('#header').height() - 20;
 
-      // 메인페이지 일때
+      // 메인페이지
       if ($('#main').length) {
          var introT = $('#mainIntro').offset().top - headerHi;
          var techT = $('#mainTech').offset().top - headerHi;
@@ -100,7 +100,7 @@ $(function() {
          }
       }
 
-      // Technology 페이지 일때
+      // Technology 페이지
       if ($('#technology').length) {
          var contentsT = $('#contents').offset().top - headerHi;
 
@@ -113,6 +113,33 @@ $(function() {
          }
       }
 
+      //Company 페이지
+      if ($('#company').length) {
+         var workT = $('#work').offset().top - headerHi;
+         var planT = $('#plan').offset().top - headerHi;
+         var containerT = $('#container').offset().top - headerHi;
+
+         if (windowT >= 0 && windowT <= workT) {
+            $('#logo').attr('src', '../../images/logo-white.png');
+            $('#nav').stop().removeClass('blk');
+         } else if (windowT >= workT && windowT <= planT) {
+            $('#logo').attr('src', '../../images/logo.png');
+            $('#nav').stop().addClass('blk');
+            $('.work__dt').stop().addClass('focus');
+            $('.work__dd').stop().addClass('focus');
+         } else if (windowT >= planT && windowT <= containerT) {
+            $('#logo').attr('src', '../../images/logo-white.png');
+            $('#nav').stop().removeClass('blk');
+            scrollFirst++;
+            if (scrollFirst == 1) {
+               textAnimation();
+            }
+         } else if (windowT >= containerT) {
+            $('#logo').attr('src', '../../images/logo.png');
+            $('#nav').stop().addClass('blk');
+         }
+      }
+
       // 탑 버튼 on
       if (windowT > 0) {
          $('#aside').stop().fadeIn();
@@ -121,8 +148,8 @@ $(function() {
       }
 
       if ($('#plan').length) {
-         var planT = $('#plan').offset().top - headerHi;
-         if (windowT >= planT) {
+         var planTT = $('#plan').offset().top - headerHi;
+         if (windowT >= planTT) {
             scrollFirst++;
             if (scrollFirst == 1) {
                textAnimation();
