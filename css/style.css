@@ -364,3 +364,32 @@
 .patent__dd { font-size: 16px; color: var(--black); }
 .patent__dd + .patent__dd { margin-top: 9px; }
 .patent__rt { width: 30%; max-width: 418px; }
+
+/* Company - location */
+.location { background: var(--bg_skyblue); }
+.lctn { width: 100%; height: 90vh; background: url('../images/about-bg.png') no-repeat center bottom / cover; position: relative; margin-bottom: calc(20vh + 200px); }
+.lctn::before { content: ''; display: block; width: 100%; height: 100%; background: rgba(0,0,0,0.2); position: absolute; top: 0; left: 0; }
+.lctn__inner { width: 100%; max-width: 1400px; padding: 0 17px; margin: 0 auto; position: relative; }
+.lctn__tit { font-size: 70px; font-weight: bold; text-align: center; color: var(--white); padding-top: 158px; margin-bottom: 60px; }
+.lctn__map { width: 100%; height: 70vh; background: #e5e5e5; border-radius: 30px; overflow: hidden; position: relative; }
+.lctn__pop { position: absolute; top: 10px; left: 10px; background: #444; padding: 30px; padding-right: 135px; border-radius: 30px; }
+.lctn__adr { font-size: 22px; color: var(--white); margin-bottom: 30px; }
+.lctn__big { display: block; font-size: 22px; color: var(--white); text-decoration: underline; }
+.lctn__find { width: 78px; height: 78px; display: flex; flex-direction: column; align-items: center; justify-content: center; background: var(--bg_white); border-radius: 16px; position: absolute; top: 50%; right: 30px; transform: translateY(-50%); font-size: 14px; color: var(--gray); }
+.lctn__find img { display: block; width: 30px; height: 30px; object-fit: contain; margin-bottom: 6px; }
+
+/* Company - Find */
+.find { width: 100%; max-width: 1400px; padding: 0 17px 120px; margin: 0 auto; }
+.find__tit { font-size: 56px; font-weight: 400; color: var(--black); margin-bottom: 60px; }
+.find__list { display: flex; gap: 30px; }
+.find__item { width: 30%; max-width: 320px; }
+.find__link { display: flex; width: 100%; align-items: center; gap: 15px; padding: 20px 26px; background: #FAE100; border-radius: 20px; border: 1px solid var(--border_color); position: relative; }
+.find__link--green { background: #00C046; border: 0; }
+.find__link::after { content: ''; display: block; width: 6px; height: 6px; border-top: 1px solid #000; border-right: 1px solid #000; position: absolute; top: 50%; right: 30px; transform: translateY(-50%) rotate(45deg); }
+.find__link > img { display: block; width: 30px; height: 30px; object-fit: contain; }
+.find__link > span { font-size: 22px; color: var(--black); font-weight: 400; }
+.find__adr { flex: 1; }
+.find__dl { display: grid; grid-template-columns: auto 1fr; gap: 24px; }
+.find__dt { font-size: 22px; font-weight: 700; }
+.find__dd { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; }
+.find__icon { display: inline-block; background: #0F218B; border-radius: 18px; padding: 5px 12px; color: var(--white); font-size: 16px; }

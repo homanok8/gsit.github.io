@@ -37,7 +37,9 @@ body, input, textarea, button, select, a {
 .nav.blk { background: rgba(0, 0, 0, 0.3); }
 .nav__list { display: flex; gap: 30px; }
 .nav__item { min-width: 80px; }
-.nav__link { display: block; font-size: 16px; color: var(--white); font-weight: 600; letter-spacing: 0; }
+.nav__link { display: inline-block; font-size: 16px; color: var(--white); font-weight: 600; letter-spacing: 0; position: relative; }
+/* .nav__link::after { content: ''; display: block; width: 0; height: 2px; background: rgba(0, 96, 253, 0.7); border-radius: 2px; position: absolute; top: calc(100% + 2px); left: 0; transition: all 0.3s; }
+.nav__item:hover .nav__link::after { width: 100%; } */
 .lnb { padding-top: 24px; padding-bottom: 10px; display: none; }
 .lnb__item { margin-bottom: 10px; }
 .lnb__item:last-child { margin-bottom: 0; }

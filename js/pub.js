@@ -173,5 +173,5 @@ $(function() {
          $(this).next().stop().slideUp();
       }
    });
-   
+
 });
