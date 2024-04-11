@@ -174,7 +174,7 @@ $(function() {
       }
    });
 
-   if ($('#ask').length) {
+   if ($('#ask').length || $('#term').length) {
       $('#logo').attr('src', '../../images/logo.png');
       $('#nav').stop().addClass('blk');
    }

@@ -49,7 +49,7 @@ body, input, textarea, button, select, a {
 .lnb__link:hover { opacity: 0.6; }
 
 /* footer */
-.footer { border-top: 1px solid var(--border_color); background: var(--bg_white); }
+.footer { height: 200px; border-top: 1px solid var(--border_color); background: var(--bg_white); }
 .footer__inner { width: 100%; max-width: 1400px; padding: 60px 17px; margin: 0 auto; display: flex; gap: 50px; }
 .logo-ft__link { display: block; }
 .logo-ft__img { display: block; width: 138px; }
