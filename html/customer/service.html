@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="icon" href="../../images/favicon.ico">
+   <title>문의하기</title>
+   <link rel="stylesheet" href="../../css/common.css">
+   <link rel="stylesheet" href="../../css/style.css">
+   <script src="../../js/jquery.min.js"></script>
+   <script src="../../js/pub.js"></script>
+</head>
+<body>
+   <div id="wrap">
+      <!-- 헤더 -->
+      <header id="header" class="header">
+         <div class="header__inner">
+            <h1 class="logo">
+               <a href="../../index.html" class="logo__link">
+                  <img class="logo__img" id="logo" src="../../images/logo-white.png" alt="GS아이티 GREAT SUCCESS IT">
+               </a>
+            </h1>
+            <nav class="nav" id="nav">
+               <ul class="nav__list">
+                  <li class="nav__item">
+                     <a href="../technology/abrSystem.html" class="nav__link">Technology Introduction</a>
+                     <ul class="lnb">
+                        <li class="lnb__item">
+                           <a href="../technology/abrSystem.html" class="lnb__link">ABR System</a>
+                        </li>
+                        <li class="lnb__item">
+                           <a href="../technology/gMetaSystem.html" class="lnb__link">G-Meta System</a>
+                        </li>
+                        <li class="lnb__item">
+                           <a href="../technology/gMentoringSystem.html" class="lnb__link">G-Mentoring</a>
+                        </li>
+                        <li class="lnb__item">
+                           <a href="../technology/siSm.html" class="lnb__link">SI / SM</a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="nav__item">
+                     <a href="../company/about.html" class="nav__link">Company</a>
+                     <ul class="lnb">
+                        <li class="lnb__item">
+                           <a href="../company/about.html" class="lnb__link">GSIT 소개</a>
+                        </li>
+                        <li class="lnb__item">
+                           <a href="../company/location.html" class="lnb__link">찾아오시는 길</a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="nav__item">
+                     <a href="service.html" class="nav__link">Customer Service</a>
+                     <ul class="lnb">
+                        <li class="lnb__item">
+                           <a href="service.html" class="lnb__link">문의하기</a>
+                        </li>
+                     </ul>
+                  </li>
+               </ul>
+            </nav>
+         </div>
+      </header>
+      <!-- // 헤더 -->
+
+      <!-- 내용 -->
+      <main class="ask" id="ask">
+         <!-- Customer - service -->
+         <section class="ask__inner">
+            <h2 class="ask__tit">문의하기</h2>
+            <p class="ask__desc">궁금한 사항이 있으시면 문의하기를 눌러주세요</p>
+            <p class="ask__ntc">
+               <i></i>
+               필수입력
+            </p>
+            <form action="">
+               <dl class="ask__dl">
+                  <dt class="ask__dt">문의유형</dt>
+                  <dd class="ask__dd ask__dd--flex">
+                     <span class="ask__box">
+                        <input class="ask__radio" type="radio" name="askType" value="intrd" id="intrd">
+                        <label class="ask__label" for="intrd">도입문의</label>
+                     </span>
+                     <span class="ask__box">
+                        <input class="ask__radio" type="radio" name="askType" value="skill" id="skill">
+                        <label class="ask__label" for="skill">기술문의</label>
+                     </span>
+                     <span class="ask__box">
+                        <input class="ask__radio" type="radio" name="askType" value="other" id="other">
+                        <label class="ask__label" for="other">기타문의</label>
+                     </span>
+                  </dd>
+               </dl>
+               <dl class="ask__dl">
+                  <dt class="ask__dt">
+                     <span>기본정보</span>
+                  </dt>
+                  <dd class="ask__dd ask__dd--grid">
+                     <span class="ask__box">
+                        <input class="ask__input" name="userName" type="text" placeholder="이름">
+                     </span>
+                     <span class="ask__box">
+                        <input class="ask__input" name="company" type="text" placeholder="회사명">
+                     </span>
+                     <span class="ask__box">
+                        <input class="ask__input" name="phone" type="text" placeholder="연락처">
+                     </span>
+                     <span class="ask__box">
+                        <input class="ask__input" name="email" type="text" placeholder="이메일">
+                     </span>
+                  </dd>
+               </dl>
+               <dl class="ask__dl">
+                  <dt class="ask__dt">
+                     <span>문의내용</span>
+                  </dt>
+                  <dd class="ask__dd ask__dd--grid2">
+                     <span class="ask__box">
+                        <input class="ask__input" name="title" type="text" placeholder="제목">
+                     </span>
+                     <span class="ask__box">
+                        <textarea class="ask__textarea" name="contents" placeholder="내용"></textarea>
+                     </span>
+                  </dd>
+               </dl>
+               <dl class="ask__dl">
+                  <dt class="ask__dt">
+                     <span>개인정보 취급방침</span>
+                  </dt>
+                  <dd class="ask__dd ask__dd--grid2">
+                     <span class="ask__agree">개인정보를 다음의 목적에 위해 처리합니다. 처리한 개인정보는 다음의 목적 이외의 용도로 사용되지 않으며 이용 목적이 변경될 시에는 ＇개인정보보호법’ 제 18조에 따라 별도의 동의를 받는 등 필요한 조치를 이행할 예정입니다.</span>
+                     <span class="ask__agree-check">
+                        <input class="ask__checkbox" type="checkbox" name="agree" id="agree">
+                        <label for="agree">개인정보 수집 및 이용 동의</label>
+                     </span>
+                  </dd>
+               </dl>
+               <div class="ask__bm">
+                  <button type="submit" class="ask__btn btn">문의 접수</button>
+               </div>
+            </form>
+         </section>
+         <!-- // Customer - service -->
+
+         <!-- top button --> 
+         <aside class="aside" id="aside">
+            <button type="button" class="top-btn" id="topBtn">
+               <span>TOP</span>
+            </button>
+         </aside>
+         <!-- // top button -->
+      </main>
+      <!-- // 내용 -->
+
+      <!-- footer -->
+      <footer class="footer" id="footer">
+         <div class="footer__inner">
+            <h2 class="logo-ft">
+               <a href="../../index.html" class="logo-ft__link">
+                  <img class="logo-ft__img" src="../../images/logo.png" alt="">
+               </a>
+            </h2>
+            <div class="footer__adr">
+               <address class="address">서울특별시 금천구 가산디지털1로 5, 1310호 (대륭테크노타운 20차)</address>
+               <ul class="footer__phone">
+                  <li>T&#41; 02-2225-0038</li>
+                  <li>F&#41; 02-2225-0039</li>
+               </ul>
+               <p>Copyright © GSIT. All Rights Reserved.</p>
+            </div>
+         </div>
+      </footer>
+      <!-- // footer -->
+   </div>
+</body>
+</html>

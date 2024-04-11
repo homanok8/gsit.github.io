@@ -174,4 +174,9 @@ $(function() {
       }
    });
 
+   if ($('#ask').length) {
+      $('#logo').attr('src', '../../images/logo.png');
+      $('#nav').stop().addClass('blk');
+   }
+
 });
