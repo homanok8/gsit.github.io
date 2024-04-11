@@ -440,3 +440,25 @@
 .nttn__radio:checked { border: 3px solid #2D5BFF; background: var(--bg_white); }
 .nttn__radio:checked::before { background: #2D5BFF; }
 .nttn__label { font-size: 16px; color: var(--black); font-weight: 400; }
+
+/* Term - search list */
+.term__contents { background: var(--bg_white); border-top: 1px solid var(--border_color); padding: 50px; }
+.term__inner { width: 100%; max-width: 1300px; padding: 0 10px; }
+.copy { display: flex; align-items: center; justify-content: center; margin-bottom: 60px; }
+.copy__block { width: 100%; max-width: 582px; min-height: 46px; display: flex; align-items: center; background: #686881; border-radius: 25px; padding: 14px 20px; position: relative; }
+.copy__text { font-size: 16px; font-weight: 400; color: var(--white); }
+.copy__btn { display: block; height: calc(100% + 2px); padding: 14px 24px; font-size: 16px; color: var(--black); font-weight: 400; cursor: pointer; background: var(--bg_white); border: 1px solid var(--border_color); position: absolute; top: -1px; right: -2px; border-radius: 25px; }
+.term__block { display: flex; flex-direction: column; gap: 30px; }
+.term__bx { padding: 40px 30px; border: 1px solid var(--border_color); border-radius: 30px; }
+.term__keyword { font-size: 22px; color: var(--black); font-weight: 400; margin-bottom: 20px; }
+.term__keyword > b { font-weight: 700; }
+.term__table { width: 100%; }
+.term__table td { padding-bottom: 20px; font-size: 16px; }
+.term__table td:first-child { width: 100%; }
+.term__table tr + tr td { padding-top: 20px; border-top: 1px solid var(--border_color); }
+.term__desc { display: flex; flex-direction: column; gap: 6px; color: var(--black); }
+.term__desc > em { color: var(--gray); }
+.term__blue { display: block; padding: 0 16px; white-space: nowrap; color: #2D5BFF; position: relative; }
+.term__blue::after { content: ''; display: block; width: 1px; height: 8px; background: var(--border_color); position: absolute; top: 5px; right: 0; }
+.term__blk { display: block; white-space: nowrap; padding-left: 16px; padding-right: 5px; }
+.term__date { display: block; white-space: nowrap; }
