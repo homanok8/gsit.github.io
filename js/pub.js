@@ -1,9 +1,17 @@
 $(function() {
    // 메뉴 펼치기
    $('#nav').hover(function() {
-      $('.lnb').stop().slideDown(200);
+      if (window.innerWidth > 1024) {
+         $('.lnb').stop().slideDown(200);
+      }
    }, function() {
-      $('.lnb').stop().slideUp(200);
+      if (window.innerWidth > 1024) {
+         $('.lnb').stop().slideUp(200);
+      }
+   });
+   $('#menuToggleBtn').click(function() {
+      $(this).stop().toggleClass('active');
+      $('.nav__list').stop().slideToggle();
    });
 
    let slideCount = 0;
