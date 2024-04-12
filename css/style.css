@@ -479,4 +479,9 @@
 @media (max-width: 480px) {
    html { font-size: 40%; }
    .cntct__bg { display: none; }
+   .intro__inner { padding: 10rem 1.7rem; }
+   .intro__rt { height: 28rem; }
+   .tech__list { gap: 2rem; }
+   .tech__link { margin-bottom: 2.5rem; }
+   .tech__img { max-width: 11rem; }
 }
