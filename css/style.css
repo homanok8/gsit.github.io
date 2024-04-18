@@ -556,8 +556,10 @@
    .system__name > br { display: none; }
    .system__list { grid-template-columns: 1fr 1fr 1fr; }
    .system__lf--flex { flex-direction: row; padding: 0; }
-   .system__lf-list { flex-direction: row; justify-content: space-between; }
-   .system__lf-bm { display: flex; align-items: center; }
+   .system__lf-top { padding: 2rem; }
+   .system__lf-list { flex-direction: row; justify-content: space-between; gap: 1rem; }
+   .system__lf-item > img { width: 6rem; height: 6rem; }
+   .system__lf-bm { display: flex; align-items: center; padding: 2rem; }
    .about__list { gap: 1rem; }
    .about__icon { width: 7rem; height: 7rem; }
    .about__cap { font-size: 1.5rem; font-weight: 600; }
