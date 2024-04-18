@@ -20,6 +20,7 @@
 }
 html {
 	font-size: 62.5%;
+	-webkit-text-size-adjust: none;
 }
 body, input, textarea, button, select, a {
    font-family: 'Pretendard', sans-serif !important;
