@@ -77,3 +77,6 @@ body, input, textarea, button, select, a {
 	.nav__link { font-size: 3rem; }
 	.lnb__link { font-size: 2rem; }
 }
+@media (max-width: 480px) {
+	.nav { padding: 0; }
+}
