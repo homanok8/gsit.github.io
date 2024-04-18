@@ -572,7 +572,7 @@
    .hst__year { font-size: 2.5rem; }
    .hst__item { font-size: 1.8rem; }
    .ognz__desc { font-size: 1.4rem; }
-   .ognz__item { padding: 2rem; }
+   .ognz__item { padding: 1rem; border-radius: 2rem; }
    .patent__block { flex-direction: column; gap: 1rem; }
    .patent__rt { width: 100%; max-width: unset; }
    .find__tit { font-size: 4rem; }
@@ -594,4 +594,5 @@
    .system__fig > img { width: 3.5rem; }
    .effect__item { line-height: 2.5rem; }
    .effect__num { font-size: 2.6rem; }
+   .about__item { gap: 1rem; }
 }
