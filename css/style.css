@@ -591,4 +591,7 @@
    .nttn__radio::before { width: 1rem; height: 1rem; }
    .term__tit { font-size: 3rem; }
    .si { grid-template-columns: 1fr; }
+   .system__fig > img { width: 3.5rem; }
+   .effect__item { line-height: 2.5rem; }
+   .effect__num { font-size: 2.6rem; }
 }
