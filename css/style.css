@@ -548,6 +548,7 @@
    .system__top > .system__relf .system__desc { padding-bottom: 0; padding-right: 5px; font-size: 11px; }
    .system__mdl .system__top .gradient-box { width: calc(3rem + 5px); transform: rotate(90deg); }
    .system__mdl .system__btm > .system__relf .gradient-box { width: calc(3rem + 5px); transform: rotate(90deg); }
+   .system__mdl .system__btm > .system__relf .gradient-box .gradient-line { width: 105%; }
    .system__rotate { top: 97%; left: 50%; transform: translateX(-50%); }
    .system__desc { white-space: nowrap; }
    .system__flex { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.6rem; }
