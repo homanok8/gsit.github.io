@@ -515,6 +515,19 @@
    .lctn { margin-bottom: 20vh; }
    .find__list { flex-wrap: wrap; }
    .find__adr { flex: unset; width: 100%; }
+   .si { gap: 1.5rem; grid-template-columns: 14rem 1fr 14rem; }
+   .si__name { font-size: 2.3rem; }
+   .si__grid { margin-bottom: 2rem; }
+   .si__lf { padding: 1.5rem; border-radius: 2rem; }
+   .si__head { font-size: 1.5rem; padding: 1rem; }
+   .si__box { font-size: 1.4rem; padding: 1.8rem 0; gap: 1.8rem; }
+   .si__defo { font-size: 1.5rem; padding: 1.2rem; }
+   .si__btw { font-size: 1.3rem; }
+   .si__desc { font-size: 1.4rem; }
+   .si__rt { border-radius: 2rem; padding: 1.5rem; }
+   .si__cnt { gap: 0.5rem; font-size: 1.4rem; }
+   .si__item { padding: 0.8rem; }
+   .si__txt { font-size: 1.4rem; }
 }
 @media (max-width: 480px) {
    html { font-size: 40%; }
@@ -575,4 +588,5 @@
    .nttn__radio:checked { border: 2px solid #2D5BFF; }
    .nttn__radio::before { width: 1rem; height: 1rem; }
    .term__tit { font-size: 3rem; }
+   .si { grid-template-columns: 1fr; }
 }
